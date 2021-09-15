@@ -2,9 +2,15 @@ package me.lucasbatista.katas
 
 // P001: Write a program that counts duplicate characters from a given string.
 fun countDuplicates(input: String): Int {
-    val chars = HashSet<Char>()
-    input.forEach(chars::add)
+    val nonRepeatedChars = HashSet<Char>()
+    input.forEach(nonRepeatedChars::add)
     var duplicates = 0
-    chars.forEach { if (input.count { ch -> ch == it } > 1) duplicates++ }
+    nonRepeatedChars.forEach { if (input.count { ch -> ch == it } > 1) duplicates++ }
     return duplicates
+}
+
+// P002: Write a program that returns the first non-repeated character from a given string.
+fun findFirstNonRepeatedCharacter(input: String): Char? {
+    input.forEach { if (input.count { ch -> ch == it } == 1) return it }
+    return null
 }

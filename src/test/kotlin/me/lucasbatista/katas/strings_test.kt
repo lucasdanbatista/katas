@@ -12,4 +12,12 @@ class StringsTest {
         assertEquals(3, countDuplicates("aac1123??"))
         assertEquals(4, countDuplicates("aac11_2_3??"))
     }
+
+    @Test
+    fun findFirstNonRepeatedCharacterTest() {
+        assertEquals('b', findFirstNonRepeatedCharacter("baacct"))
+        assertEquals('?', findFirstNonRepeatedCharacter("aa?cqqcbb!"))
+        assertEquals('o', findFirstNonRepeatedCharacter("aa??cbc_b__bo"))
+        assertEquals(null, findFirstNonRepeatedCharacter("!!"))
+    }
 }

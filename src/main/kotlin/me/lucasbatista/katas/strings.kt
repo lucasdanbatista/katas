@@ -34,3 +34,6 @@ fun toNumber(input: String): Number =
 
 // P008: Write a program that removes all white spaces from the given string.
 fun removeWhiteSpaces(input: String) = input.filter { !it.isWhitespace() }
+
+// P009: Write a program that joins the given strings by the given delimiter.
+fun joinWithDelimiter(input: String, delimiter: Char) = input.replace(' ', delimiter)

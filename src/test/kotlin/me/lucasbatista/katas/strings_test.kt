@@ -69,4 +69,10 @@ class StringsTest {
         assertEquals("HelloWorld", removeWhiteSpaces(" Hello World "))
         assertEquals("HelloWorld", removeWhiteSpaces("H e l l o  W o r l d"))
     }
+
+    @Test
+    fun joinWIthDelimiterTest() {
+        assertEquals("hello_world", joinWithDelimiter("hello world", '_'))
+        assertEquals("hello.world.com", joinWithDelimiter("hello world com", '.'))
+    }
 }

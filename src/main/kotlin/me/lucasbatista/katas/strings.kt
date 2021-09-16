@@ -14,3 +14,6 @@ fun findFirstNonRepeatedCharacter(input: String): Char? {
     input.forEach { if (input.count { ch -> ch == it } == 1) return it }
     return null
 }
+
+// P003: Write a program that reverses the letters of each word and the words themselves.
+fun reverseLettersAndWords(input: String) = input.reversed()

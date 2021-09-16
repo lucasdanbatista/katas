@@ -20,4 +20,11 @@ class StringsTest {
         assertEquals('o', findFirstNonRepeatedCharacter("aa??cbc_b__bo"))
         assertEquals(null, findFirstNonRepeatedCharacter("!!"))
     }
+
+    @Test
+    fun reverseLettersAndWordsTest() {
+        assertEquals("!dlrow olleh", reverseLettersAndWords("hello world!"))
+        assertEquals("esac_kcans", reverseLettersAndWords("snack_case"))
+        assertEquals("esaClemaC", reverseLettersAndWords("CamelCase"))
+    }
 }

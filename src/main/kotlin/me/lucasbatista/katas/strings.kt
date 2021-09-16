@@ -27,3 +27,7 @@ fun countVowelsAndConsonants(input: String) = input.filter { it.isLetter() && !i
 // P006: Write a program that counts the occurrences of a certain character in a given string.
 fun countOccurrences(input: String, char: Char) = input.count { it == char }
 
+// P007: Write a program that converts the given String (representing a number) into an int, long, float or double
+fun toNumber(input: String): Number =
+    if (input.contains('f')) input.toFloatOrNull() ?: throw NumberFormatException()
+    else input.toIntOrNull() ?: input.toLongOrNull() ?: input.toDoubleOrNull() ?: throw NumberFormatException()

@@ -54,4 +54,12 @@ class StringsTest {
         assertEquals(2, countOccurrences("a a", 'a'))
         assertEquals(4, countOccurrences(" a a a ", ' '))
     }
+
+    @Test
+    fun toNumberTest() {
+        assertEquals(1000000000000000000L, toNumber("1000000000000000000"))
+        assertEquals(1.5f, toNumber("1.5f"))
+        assertEquals(1.0, toNumber("1.0"))
+        assertEquals(-1, toNumber("-1"))
+    }
 }

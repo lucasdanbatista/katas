@@ -17,3 +17,6 @@ fun findFirstNonRepeatedCharacter(input: String): Char? {
 
 // P003: Write a program that reverses the letters of each word and the words themselves.
 fun reverseLettersAndWords(input: String) = input.reversed()
+
+// P004: Write a program that checks whether the given string contains only digits.
+fun containsOnlyDigits(input: String) = input.matches("^[0-9]*\$".toRegex())

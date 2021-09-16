@@ -2,6 +2,8 @@ package me.lucasbatista.katas
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class StringsTest {
     @Test
@@ -26,5 +28,15 @@ class StringsTest {
         assertEquals("!dlrow olleh", reverseLettersAndWords("hello world!"))
         assertEquals("esac_kcans", reverseLettersAndWords("snack_case"))
         assertEquals("esaClemaC", reverseLettersAndWords("CamelCase"))
+    }
+
+    @Test
+    fun containsOnlyDigitsTest() {
+        assertTrue { containsOnlyDigits("1234") }
+        assertFalse { containsOnlyDigits("12-34") }
+        assertFalse { containsOnlyDigits("12 34") }
+        assertFalse { containsOnlyDigits(" 1234") }
+        assertFalse { containsOnlyDigits("1234 ") }
+        assertFalse { containsOnlyDigits("12a34") }
     }
 }

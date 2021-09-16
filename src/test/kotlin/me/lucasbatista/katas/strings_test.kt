@@ -39,4 +39,12 @@ class StringsTest {
         assertFalse { containsOnlyDigits("1234 ") }
         assertFalse { containsOnlyDigits("12a34") }
     }
+
+    @Test
+    fun countVowelsAndConsonantsTest() {
+        assertEquals(5, countVowelsAndConsonants("a e i o u"))
+        assertEquals(3, countVowelsAndConsonants("bcd"))
+        assertEquals(7, countVowelsAndConsonants("aee * oou ? i"))
+        assertEquals(4, countVowelsAndConsonants("!ab_cd!"))
+    }
 }

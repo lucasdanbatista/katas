@@ -19,4 +19,7 @@ fun findFirstNonRepeatedCharacter(input: String): Char? {
 fun reverseLettersAndWords(input: String) = input.reversed()
 
 // P004: Write a program that checks whether the given string contains only digits.
-fun containsOnlyDigits(input: String) = input.matches("^[0-9]*\$".toRegex())
+fun containsOnlyDigits(input: String) = input.all { it.isDigit() }
+
+// P005: Write a program that counts the vowels and consonants amount in a given string.
+fun countVowelsAndConsonants(input: String) = input.filter { it.isLetter() && !it.isWhitespace() }.length

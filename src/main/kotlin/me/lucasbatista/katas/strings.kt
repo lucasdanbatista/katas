@@ -36,4 +36,8 @@ fun toNumber(input: String): Number =
 fun removeWhiteSpaces(input: String) = input.filter { !it.isWhitespace() }
 
 // P009: Write a program that joins the given strings by the given delimiter.
-fun joinWithDelimiter(input: String, delimiter: Char) = input.replace(' ', delimiter)
+fun joinWithDelimiter(inputs: List<String>, delimiter: Char): String {
+    var joined = ""
+    inputs.forEach { joined = if (joined.isEmpty()) joined.plus(it) else joined.plus(delimiter + it) }
+    return joined
+}

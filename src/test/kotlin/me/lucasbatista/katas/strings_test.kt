@@ -72,7 +72,7 @@ class StringsTest {
 
     @Test
     fun joinWIthDelimiterTest() {
-        assertEquals("hello_world", joinWithDelimiter("hello world", '_'))
-        assertEquals("hello.world.com", joinWithDelimiter("hello world com", '.'))
+        assertEquals("hello_world", joinWithDelimiter(listOf("hello", "world"), '_'))
+        assertEquals("hello.world.com", joinWithDelimiter(listOf("hello", "world", "com"), '.'))
     }
 }

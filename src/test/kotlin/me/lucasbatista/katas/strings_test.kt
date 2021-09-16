@@ -47,4 +47,11 @@ class StringsTest {
         assertEquals(7, countVowelsAndConsonants("aee * oou ? i"))
         assertEquals(4, countVowelsAndConsonants("!ab_cd!"))
     }
+
+    @Test
+    fun countOccurrencesTest() {
+        assertEquals(1, countOccurrences("a_!a?açDa", '!'))
+        assertEquals(2, countOccurrences("a a", 'a'))
+        assertEquals(4, countOccurrences(" a a a ", ' '))
+    }
 }

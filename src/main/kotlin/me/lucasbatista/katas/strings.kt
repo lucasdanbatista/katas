@@ -23,3 +23,7 @@ fun containsOnlyDigits(input: String) = input.all { it.isDigit() }
 
 // P005: Write a program that counts the vowels and consonants amount in a given string.
 fun countVowelsAndConsonants(input: String) = input.filter { it.isLetter() && !it.isWhitespace() }.length
+
+// P006: Write a program that counts the occurrences of a certain character in a given string.
+fun countOccurrences(input: String, char: Char) = input.count { it == char }
+

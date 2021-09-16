@@ -31,3 +31,6 @@ fun countOccurrences(input: String, char: Char) = input.count { it == char }
 fun toNumber(input: String): Number =
     if (input.contains('f')) input.toFloatOrNull() ?: throw NumberFormatException()
     else input.toIntOrNull() ?: input.toLongOrNull() ?: input.toDoubleOrNull() ?: throw NumberFormatException()
+
+// P008: Write a program that removes all white spaces from the given string.
+fun removeWhiteSpaces(input: String) = input.filter { !it.isWhitespace() }

@@ -62,4 +62,11 @@ class StringsTest {
         assertEquals(1.0, toNumber("1.0"))
         assertEquals(-1, toNumber("-1"))
     }
+
+    @Test
+    fun removeWhiteSpacesTest() {
+        assertEquals("HelloWorld", removeWhiteSpaces("Hello World"))
+        assertEquals("HelloWorld", removeWhiteSpaces(" Hello World "))
+        assertEquals("HelloWorld", removeWhiteSpaces("H e l l o  W o r l d"))
+    }
 }

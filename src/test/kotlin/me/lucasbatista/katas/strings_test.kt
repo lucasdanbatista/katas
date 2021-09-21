@@ -75,4 +75,10 @@ class StringsTest {
         assertEquals("hello_world", joinWithDelimiter(listOf("hello", "world"), '_'))
         assertEquals("hello.world.com", joinWithDelimiter(listOf("hello", "world", "com"), '.'))
     }
+
+    @Test
+    fun permuteTest() {
+        assertEquals(listOf("ab", "ba"), "ab".permute())
+        assertEquals(listOf("abc", "acb", "bac", "bca", "cab", "cba"), "abc".permute())
+    }
 }

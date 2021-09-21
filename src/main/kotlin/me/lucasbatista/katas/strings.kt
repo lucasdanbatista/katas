@@ -41,3 +41,17 @@ fun joinWithDelimiter(inputs: List<String>, delimiter: Char): String {
     inputs.forEach { joined = if (joined.isEmpty()) joined.plus(it) else joined.plus(delimiter + it) }
     return joined
 }
+
+// P010: Write a program that generates all the permutations of a given string.
+fun String.permute(): List<String> {
+    val result = ArrayList<String>()
+    fun permute(prefix: String, input: String) {
+        if (input.isEmpty()) result.add(prefix)
+        else for (i in input.indices) permute(
+            prefix + input[i],
+            input.substring(0, i) + input.substring(i + 1, input.length)
+        )
+    }
+    permute("", this)
+    return result
+}

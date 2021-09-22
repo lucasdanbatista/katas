@@ -55,3 +55,6 @@ fun String.permute(): List<String> {
     permute("", this)
     return result
 }
+
+// P011: Write a program that determines whether the given string is a palindrome or not.
+fun String.isPalindrome() = this.reversed() == this

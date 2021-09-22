@@ -81,4 +81,12 @@ class StringsTest {
         assertEquals(listOf("ab", "ba"), "ab".permute())
         assertEquals(listOf("abc", "acb", "bac", "bca", "cab", "cba"), "abc".permute())
     }
+
+    @Test
+    fun isPalindromeTest() {
+        assertTrue { "ana".isPalindrome() }
+        assertTrue { "91019".isPalindrome() }
+        assertTrue { "racecar".isPalindrome() }
+        assertFalse { "car".isPalindrome() }
+    }
 }

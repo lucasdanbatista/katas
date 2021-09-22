@@ -8,59 +8,59 @@ import kotlin.test.assertTrue
 class StringsTest {
     @Test
     fun countDuplicatesTest() {
-        assertEquals(0, countDuplicates("abc123?"))
-        assertEquals(1, countDuplicates("aac123?"))
-        assertEquals(2, countDuplicates("aac123??"))
-        assertEquals(3, countDuplicates("aac1123??"))
-        assertEquals(4, countDuplicates("aac11_2_3??"))
+        assertEquals(0, "abc123?".countDuplicates())
+        assertEquals(1, "aac123?".countDuplicates())
+        assertEquals(2, "aac123??".countDuplicates())
+        assertEquals(3, "aac1123??".countDuplicates())
+        assertEquals(4, "aac11_2_3??".countDuplicates())
     }
 
     @Test
     fun findFirstNonRepeatedCharacterTest() {
-        assertEquals('b', findFirstNonRepeatedCharacter("baacct"))
-        assertEquals('?', findFirstNonRepeatedCharacter("aa?cqqcbb!"))
-        assertEquals('o', findFirstNonRepeatedCharacter("aa??cbc_b__bo"))
-        assertEquals(null, findFirstNonRepeatedCharacter("!!"))
+        assertEquals('b', "baacct".findFirstNonRepeatedCharacter())
+        assertEquals('?', "aa?cqqcbb!".findFirstNonRepeatedCharacter())
+        assertEquals('o', "aa??cbc_b__bo".findFirstNonRepeatedCharacter())
+        assertEquals(null, "!!".findFirstNonRepeatedCharacter())
     }
 
     @Test
     fun reverseLettersAndWordsTest() {
-        assertEquals("!dlrow olleh", reverseLettersAndWords("hello world!"))
-        assertEquals("esac_kcans", reverseLettersAndWords("snack_case"))
-        assertEquals("esaClemaC", reverseLettersAndWords("CamelCase"))
+        assertEquals("!dlrow olleh", "hello world!".reverseLettersAndWords())
+        assertEquals("esac_kcans", "snack_case".reverseLettersAndWords())
+        assertEquals("esaClemaC", "CamelCase".reverseLettersAndWords())
     }
 
     @Test
     fun containsOnlyDigitsTest() {
-        assertTrue { containsOnlyDigits("1234") }
-        assertFalse { containsOnlyDigits("12-34") }
-        assertFalse { containsOnlyDigits("12 34") }
-        assertFalse { containsOnlyDigits(" 1234") }
-        assertFalse { containsOnlyDigits("1234 ") }
-        assertFalse { containsOnlyDigits("12a34") }
+        assertTrue { "1234".containsOnlyDigits() }
+        assertFalse { "12-34".containsOnlyDigits() }
+        assertFalse { "12 34".containsOnlyDigits() }
+        assertFalse { " 1234".containsOnlyDigits() }
+        assertFalse { "1234 ".containsOnlyDigits() }
+        assertFalse { "12a34".containsOnlyDigits() }
     }
 
     @Test
     fun countVowelsAndConsonantsTest() {
-        assertEquals(5, countVowelsAndConsonants("a e i o u"))
-        assertEquals(3, countVowelsAndConsonants("bcd"))
-        assertEquals(7, countVowelsAndConsonants("aee * oou ? i"))
-        assertEquals(4, countVowelsAndConsonants("!ab_cd!"))
+        assertEquals(5, "a e i o u".countVowelsAndConsonants())
+        assertEquals(3, "bcd".countVowelsAndConsonants())
+        assertEquals(7, "aee * oou ? i".countVowelsAndConsonants())
+        assertEquals(4, "!ab_cd!".countVowelsAndConsonants())
     }
 
     @Test
     fun countOccurrencesTest() {
-        assertEquals(1, countOccurrences("a_!a?açDa", '!'))
-        assertEquals(2, countOccurrences("a a", 'a'))
-        assertEquals(4, countOccurrences(" a a a ", ' '))
+        assertEquals(1, "a_!a?açDa".countOccurrences('!'))
+        assertEquals(2, "a a".countOccurrences('a'))
+        assertEquals(4, " a a a ".countOccurrences(' '))
     }
 
     @Test
     fun toNumberTest() {
-        assertEquals(1000000000000000000L, toNumber("1000000000000000000"))
-        assertEquals(1.5f, toNumber("1.5f"))
-        assertEquals(1.0, toNumber("1.0"))
-        assertEquals(-1, toNumber("-1"))
+        assertEquals(1000000000000000000L, "1000000000000000000".toNumber())
+        assertEquals(1.5f, "1.5f".toNumber())
+        assertEquals(1.0, "1.0".toNumber())
+        assertEquals(-1, "-1".toNumber())
     }
 
     @Test

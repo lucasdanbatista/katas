@@ -1,36 +1,36 @@
 package me.lucasbatista.katas
 
 // P001: Write a program that counts duplicate characters from a given string.
-fun countDuplicates(input: String): Int {
+fun String.countDuplicates(): Int {
     val nonRepeatedChars = HashSet<Char>()
-    input.forEach(nonRepeatedChars::add)
+    this.forEach(nonRepeatedChars::add)
     var duplicates = 0
-    nonRepeatedChars.forEach { if (input.count { ch -> ch == it } > 1) duplicates++ }
+    nonRepeatedChars.forEach { if (this.count { ch -> ch == it } > 1) duplicates++ }
     return duplicates
 }
 
 // P002: Write a program that returns the first non-repeated character from a given string.
-fun findFirstNonRepeatedCharacter(input: String): Char? {
-    input.forEach { if (input.count { ch -> ch == it } == 1) return it }
+fun String.findFirstNonRepeatedCharacter(): Char? {
+    this.forEach { if (this.count { ch -> ch == it } == 1) return it }
     return null
 }
 
 // P003: Write a program that reverses the letters of each word and the words themselves.
-fun reverseLettersAndWords(input: String) = input.reversed()
+fun String.reverseLettersAndWords() = this.reversed()
 
 // P004: Write a program that checks whether the given string contains only digits.
-fun containsOnlyDigits(input: String) = input.all { it.isDigit() }
+fun String.containsOnlyDigits() = this.all { it.isDigit() }
 
 // P005: Write a program that counts the vowels and consonants amount in a given string.
-fun countVowelsAndConsonants(input: String) = input.filter { it.isLetter() && !it.isWhitespace() }.length
+fun String.countVowelsAndConsonants() = this.filter { it.isLetter() && !it.isWhitespace() }.length
 
 // P006: Write a program that counts the occurrences of a certain character in a given string.
-fun countOccurrences(input: String, char: Char) = input.count { it == char }
+fun String.countOccurrences(ch: Char) = this.count { it == ch }
 
 // P007: Write a program that converts the given String (representing a number) into an int, long, float or double
-fun toNumber(input: String): Number =
-    if (input.contains('f')) input.toFloatOrNull() ?: throw NumberFormatException()
-    else input.toIntOrNull() ?: input.toLongOrNull() ?: input.toDoubleOrNull() ?: throw NumberFormatException()
+fun String.toNumber(): Number =
+    if (this.contains('f')) this.toFloatOrNull() ?: throw NumberFormatException()
+    else this.toIntOrNull() ?: this.toLongOrNull() ?: this.toDoubleOrNull() ?: throw NumberFormatException()
 
 // P008: Write a program that removes all white spaces from the given string.
 fun removeWhiteSpaces(input: String) = input.filter { !it.isWhitespace() }

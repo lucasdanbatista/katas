@@ -102,4 +102,12 @@ class StringsTest {
         assertEquals("abcd", "ab_cd".removeChar('_'))
         assertEquals("abcdefghi", "abc.def.ghi".removeChar('.'))
     }
+
+    @Test
+    fun findMostFrequentCharTest() {
+        assertEquals('c', "abbcccd".findMostFrequentChar())
+        assertEquals('.', "a.b.c.d.e.f".findMostFrequentChar())
+        assertEquals(' ', "a  bc def".findMostFrequentChar())
+        assertEquals('_', "a____c__d_f".findMostFrequentChar())
+    }
 }

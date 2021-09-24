@@ -96,4 +96,10 @@ class StringsTest {
         assertEquals("1234", "11234".removeDuplicates())
         assertEquals("abc_1?23", "abbc__1?123?".removeDuplicates())
     }
+
+    @Test
+    fun removeCharTest() {
+        assertEquals("abcd", "ab_cd".removeChar('_'))
+        assertEquals("abcdefghi", "abc.def.ghi".removeChar('.'))
+    }
 }

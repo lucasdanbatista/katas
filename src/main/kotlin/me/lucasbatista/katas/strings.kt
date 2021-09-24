@@ -61,3 +61,6 @@ fun String.isPalindrome() = this.reversed() == this
 
 // P012: Write a program that removes the duplicate characters from the given string.
 fun String.removeDuplicates() = this.toCollection(mutableSetOf()).joinToString("")
+
+// P013: Write a program that removes the given character from the given string.
+fun String.removeChar(ch: Char) = this.replace(ch.toString(), "")

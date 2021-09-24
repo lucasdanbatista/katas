@@ -58,3 +58,6 @@ fun String.permute(): List<String> {
 
 // P011: Write a program that determines whether the given string is a palindrome or not.
 fun String.isPalindrome() = this.reversed() == this
+
+// P012: Write a program that removes the duplicate characters from the given string.
+fun String.removeDuplicates() = this.toCollection(mutableSetOf()).joinToString("")

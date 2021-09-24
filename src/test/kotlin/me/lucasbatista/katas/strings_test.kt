@@ -89,4 +89,11 @@ class StringsTest {
         assertTrue { "racecar".isPalindrome() }
         assertFalse { "car".isPalindrome() }
     }
+
+    @Test
+    fun removeDuplicatesTest() {
+        assertEquals("abcd", "aabcd".removeDuplicates())
+        assertEquals("1234", "11234".removeDuplicates())
+        assertEquals("abc_1?23", "abbc__1?123?".removeDuplicates())
+    }
 }

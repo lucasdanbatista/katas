@@ -65,5 +65,8 @@ fun String.removeDuplicates() = this.toCollection(mutableSetOf()).joinToString("
 // P013: Write a program that removes the given character from the given string.
 fun String.removeChar(ch: Char) = this.replace(ch.toString(), "")
 
-// P014: Write a program that finds the character with the most appearances in the given string
+// P014: Write a program that finds the character with the most appearances in the given string.
 fun String.findMostFrequentChar() = this.groupBy { it }.toList().sortedByDescending { it.second.size }[0].first
+
+// P015: Write a program that sorts by the length of the given array of strings.
+fun sortArrays(elements: MutableCollection<String>) = elements.sorted().toMutableList()

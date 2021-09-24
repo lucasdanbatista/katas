@@ -110,4 +110,12 @@ class StringsTest {
         assertEquals(' ', "a  bc def".findMostFrequentChar())
         assertEquals('_', "a____c__d_f".findMostFrequentChar())
     }
+
+    @Test
+    fun sortArraysTest() {
+        var elements = mutableListOf("123", "1234", "1", "12")
+        elements = sortArrays(elements)
+        assertEquals(elements[0], "1")
+        assertEquals(elements[3], "1234")
+    }
 }
